@@ -71,7 +71,8 @@ Install the default plugins once logged in
 
 ### Installing Docker on the server 
 
-```sudo apt install docker.io
+```
+sudo apt install docker.io
 ```
 
 ### Next, we can create a Flask application and install the required dependencies as shown:
