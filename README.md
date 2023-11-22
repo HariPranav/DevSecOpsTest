@@ -65,7 +65,7 @@ sudo systemctl start jenkins
 
 Install the default plugins once logged in 
 
-![Install_Plugins_Jenkins] (https://github.com/HariPranav/Compliance_In_The_Cloud/blob/master/images/Jenkins_Flask_Digital_Ocean/Install_Plugins_Jenkins.png?raw=true)
+![Install_Plugins_Jenkins](https://github.com/HariPranav/Compliance_In_The_Cloud/blob/master/images/Jenkins_Flask_Digital_Ocean/Install_Plugins_Jenkins.png?raw=true)
 
 ## Dockerizing a Flask application to run using Jenkins
 
@@ -101,7 +101,7 @@ touch Dockerfile
 
 ```
 
-![Folderstructure_Flask] (https://github.com/HariPranav/Compliance_In_The_Cloud/blob/master/images/Jenkins_Flask_Digital_Ocean/FolderStructure_Flask.png?raw=true)
+![Folderstructure_Flask](https://github.com/HariPranav/Compliance_In_The_Cloud/blob/master/images/Jenkins_Flask_Digital_Ocean/FolderStructure_Flask.png?raw=true)
 
 ### Creating a flask application to display a message 
 
@@ -267,7 +267,8 @@ Go to github, go to the repository -> settings, web hooks and add the jenkins re
 
 The webhook must be in the format : 
 
-```<public dns address>:8080/github-webhook/
+```
+<public dns address>:8080/github-webhook/
 ```
 
 Where the public DNS address is the IP of the Digital ocean droplet
@@ -276,7 +277,8 @@ Now make a change in the **app.py** and push the changes to git, this should tri
 
 We will most probably get an error, which is the docker daemon is not given the permissions to allow the Jenkins user to run the container. Hence we need to explicitly give permissions for the docker container to run the daemon as given below, open the Droplet and add the following command: 
 
-```sudo usermod -a -G docker jenkins
+```
+sudo usermod -a -G docker jenkins
 ```
 
 This will allow the Jenkins user to get the necessary permissions to run the docker container. 
@@ -296,4 +298,3 @@ https://shravani10k.hashnode.dev/setting-up-jenkins-cicd-pipeline-and-deploying-
 https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux
 
 https://www.jenkins.io/doc/book/installing/linux/
-
